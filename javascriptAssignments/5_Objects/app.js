@@ -70,38 +70,10 @@ group.add(10);
 group.delete(10);
 console.log(group.has(10));
 // → false
+// → false
 /*
     3. Make the Group class from the previous exercise iterable.
-*/
-class Group {
-  constructor() {
-    this.group = [];
-  }
-  add(item) {
-    if (!this.group.includes(item)) {
-      this.group.push(item);
-    }
-  }
-  delete(item) {
-    let index = this.group.indexOf(item);
-    if (index !== -1) {
-      this.group.splice(index, 1);
-    }
-  }
-  has(item) {
-    return this.group.includes(item);
-  }
-  static from(a) {
-    let g = new Group();
-    for (let item of a) {
-      g.add(item);
-    }
-    return g;
-  }
-  [Symbol.iterator]() {
-    return new GroupIterator(this);
-  }
-}
+// */
 
 class GroupIterator {
   constructor(o) {
@@ -118,9 +90,9 @@ class GroupIterator {
   }
 }
 
-for (let value of Group.from(["a", "b", "c"])) {
-  console.log(value);
-}
+// for (let value of Group.from(["a", "b", "c"])) {
+//   console.log(value);
+// }
 /*
     4. Borrowing a method
     Earlier in the chapter I mentioned that an object’s hasOwnProperty can be used as a more robust alternative to the in operator 

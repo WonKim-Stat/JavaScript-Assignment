@@ -17,7 +17,7 @@ const checkNumber = function (a, b) {
 
 console.log(checkNumber(1, 2));
 console.log(checkNumber(-2, -3));
-// console.log(checkNumber(1, "b"));
+console.log(checkNumber(1, "b"));
 
 /*
     2. Define a recursive function isEven to determine whether a number is completely divisible by 2.
@@ -44,11 +44,11 @@ let isEven = function (n) {
   }
 };
 
-// console.log(isEven(50));
-// console.log(isEven(1));
-// console.log(isEven(-1));
-// console.log(isEven(-2));
-// console.log(isEven(0));
+console.log(isEven(50));
+console.log(isEven(1));
+console.log(isEven(-1));
+console.log(isEven(-2));
+console.log(isEven(0));
 
 /*
     3. Write a function countBs that takes a string as its only argument and 
